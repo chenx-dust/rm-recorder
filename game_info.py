@@ -23,7 +23,7 @@ def check_done(matches: list, match_id: str) -> bool:
         raise Exception(f"Unexpected matches with id {match_id}: {len(fit_matches)}")
     
     match fit_matches[0]['status']:
-        case 'DONE':
+        case 'DONE' | 'PENDING':
             return True
         case 'STARTED' | 'WAITING':
             return False
