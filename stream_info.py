@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from typing import List
 import requests
 
-from . import config
+import config
 
 
 @dataclass

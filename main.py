@@ -1,9 +1,9 @@
 from typing import Sequence, List
 import time
 
-from .game_info import *
-from .stream_info import *
-from .recorder import *
+from game_info import *
+from stream_info import *
+from recorder import *
 
 
 class MultiRecorder:

@@ -6,7 +6,9 @@
 
 ```sh
 git clone https://github.com/chenx-dust/rm-recorder.git
-python3 -m rm-recorder
+cd rm-recorder
+pip3 install pyav
+python3 ./main.py
 ```
 
 ## 配置参数
@@ -29,4 +31,4 @@ CHECK_TIME = 1.             # 比赛检查间隔 (s)
 
 RoboMaster 组委会
 
-哈尔滨工业大学（深圳） 南工骁鹰
+哈尔滨工业大学（深圳） 南工骁鹰机器人队

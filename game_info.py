@@ -1,6 +1,6 @@
 import requests
 
-from . import config
+import config
 
 
 def get_matches() -> list:
