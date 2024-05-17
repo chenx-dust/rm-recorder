@@ -16,9 +16,9 @@ def get_matches() -> list:
 
     matches = []
     if fit_zones[0]['groupMatches']:
-        matches.extend(fit_zones[0]['groupMatches'])
+        matches.extend(fit_zones[0]['groupMatches']['nodes'])
     if fit_zones[0]['knockoutMatches']:
-        matches.extend(fit_zones[0]['knockoutMatches'])
+        matches.extend(fit_zones[0]['knockoutMatches']['nodes'])
     return matches
 
 def check_done(matches: list, match_id: str) -> bool:
