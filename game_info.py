@@ -14,7 +14,12 @@ def get_matches() -> list:
     if len(fit_zones) != 1:
         raise Exception(f"Unexpected zones fitted: {len(fit_zones)}")
 
-    return fit_zones[0]['groupMatches']['nodes']
+    matches = []
+    if fit_zones[0]['groupMatches']:
+        matches.extend(fit_zones[0]['groupMatches'])
+    if fit_zones[0]['knockoutMatches']:
+        matches.extend(fit_zones[0]['knockoutMatches'])
+    return matches
 
 def check_done(matches: list, match_id: str) -> bool:
     fit_matches = list(filter(lambda node: node['id'] == match_id, matches))
