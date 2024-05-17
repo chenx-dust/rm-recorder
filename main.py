@@ -18,7 +18,7 @@ class MultiRecorder:
             "_vs_" \
             f"{match_info['redSide']['player']['team']['collegeName']}_{match_info['redSide']['player']['team']['name']}" \
             ".mkv"
-        os.path.join(config.OUTPUT_DIR, fname)
+        return os.path.join(config.OUTPUT_DIR, fname)
 
     def start(self, match_info: dict ,streams: Sequence[StreamInfo]):
         print(f"Now Recording:" \
