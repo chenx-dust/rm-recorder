@@ -13,7 +13,7 @@ class MultiRecorder:
     def get_filename(self, match_info: dict, timestamp: float, name: str) -> str:
         import os
         fname = f"{time.strftime('%Y-%m-%d_%H-%M-%S', time.localtime(timestamp))}" \
-            f"_{match_info['matchType']}_{name}_" \
+            f"_{match_info['matchType']}_{match_info['slug']}_{name}_" \
             f"{match_info['blueSide']['player']['team']['collegeName']}_{match_info['blueSide']['player']['team']['name']}" \
             "_vs_" \
             f"{match_info['redSide']['player']['team']['collegeName']}_{match_info['redSide']['player']['team']['name']}" \
